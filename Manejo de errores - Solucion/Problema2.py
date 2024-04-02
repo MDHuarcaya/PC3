@@ -2,17 +2,17 @@
 
 def obtener_calificaciones():
     try:
-        calificaciones = input("Ingrese las calificaciones separadas por comas: ")
-        calificaciones_lista = calificaciones.split(',')
-        calificaciones_entero = [int(cal) for cal in calificaciones_lista]
-        return calificaciones_entero
+        notas = input("Por favor, Ingresar las notas o calificaciones separadas por comas: ")
+        notas_lista = notas.split(',')
+        notas_entero = [int(cal) for cal in notas_lista]
+        return notas_entero
     except ValueError as ve:
         print("Error:", ve)
         return obtener_calificaciones()
 
 def main():
-    calificaciones = obtener_calificaciones()
-    print("Las calificaciones ingresadas son:", calificaciones)
+    notas = obtener_calificaciones()
+    print(f"Las calificaciones ingresadas son: {notas}")
 
 if __name__ == "__main__":
     main()
