@@ -19,10 +19,10 @@ def calcular_porcentaje():
         else:
             print("Cantidad de combustible en el tanque:", str(round(porcentaje)), "%")
     except ValueError as ve:
-        print("Error:", ve)
+        print("Error, Solo se permite numeros enteros:", ve)
         calcular_porcentaje()
-    except ZeroDivisionError as zd:
-        print("Error:", zd)
+    except ZeroDivisionError as zde:
+        print("Error:", zde)
         calcular_porcentaje()
 
 if __name__ == "__main__":
